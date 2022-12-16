@@ -1,0 +1,13 @@
+// Миксин для сброса стилей у списка по умолчанию
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Брейкпоинт для мобильной версии
+// @mixin viewport-767 {
+//   @media (max-width: $vp-767) {
+//     @content;
+//   }
+// }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>inssmart - тестовое задание на HTML верстальщика</title>
+</head>
+
+<body class="page-body">
+  <div class="page-body__wrapper">
+
+    <section class="tabs">
+      <div class="container">
+        <ul class="tabs__list">
+          <li>
+            <button type="button" data-tab-btn="mountain-bike">Горный велосипед</button>
+          </li>
+          <li>
+            <button type="button" data-tab-btn="women-bike">Женский велосипед</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <ul class="products__list">
+
+          <!-- Горный велосипед -->
+          <li class="products__item" data-tab-content="mountain-bike">
+
+            <!-- Описание -->
+            <div class="description">
+              <div class="description__wrapper section-padding">
+
+                <div class="description__image">
+                  <img src="img/products/stels-510-full.jpg" width="358" height="232"
+                    alt="Велосипед STELS Navigator 510 HD 26 2022">
+                </div>
+
+                <div class="description__info">
+                  <h2>Велосипед STELS Navigator 510 HD 26 2022</h2>
+
+                  <p>Данный велосипед с&nbsp;колесами 26&nbsp;дюймов хорошо подходит высоким подросткам. Прогиб рамы
+                    и&nbsp;небольшой размер рамы расчитан на&nbsp;рост от&nbsp;135 до&nbsp;165&nbsp;см.</p>
+
+                  <p>Суммарный вес велосипеда был снижен до&nbsp;16,9&nbsp;кг, так как рама была изготовлена
+                    с&nbsp;учетом
+                    использования велосипеда подростками.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Хар-ки -->
+            <div class="characteristic" data-characteristic-block>
+
+              <div class="characteristic__wrapper section-padding section-title">
+                <h3>Характеристики</h3>
+
+                <ol class="characteristic__list" data-characteristic-list>
+                  <li data-option>Двойной обод</li>
+                  <li data-option>Алюминиевый сплав</li>
+                  <li data-option>Колеса диаметром 26&nbsp;дюймов</li>
+                  <li data-option>Покрышки 26&times;1,95&Prime;</li>
+                </ol>
+
+              </div>
+
+              <!-- Добавление хар-ик -->
+              <div class="characteristic__control section-title">
+                <h3>Добавить характеристику</h3>
+
+                <form class="characteristic__form form" action="#" method="post" data-characteristic-form>
+                  <div class="form__wrapper" data-form-wrapper>
+                    <p class="form__group" data-form-group>
+                      <label>
+                        <input type="text" name="option" placeholder="Алюминиевый сплав" data-good-characteristic>
+                      </label>
+                    </p>
+
+                    <button class="form__btn btn-liquid" type="submit">
+                      <span class="btn-liquid__text">Добавить</span>
+                      <span class="btn-liquid__wave"></span>
+                    </button>
+
+                    <!-- Сюда вставляется сообщение об ошибке ввода -->
+                  </div>
+                </form>
+
+              </div>
+
+            </div>
+
+            <!-- Подтверждение добавления хар-ки -->
+            <div class="confirmation">
+
+              <h3 class="visually-hidden">Подтверждение добавления характеристики</h3>
+              <div class="confirmation__wrapper section-padding">
+
+                <div class="confirmation__block">
+                  <button type="button">Окей</button>
+                  <button type="button">Отмена</button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <!-- Женский велосипед -->
+          <li class="products__item" data-tab-content="women-bike">
+
+            <!-- Описание -->
+            <div class="description">
+              <div class="description__wrapper section-padding">
+
+                <div class="description__image">
+                  <img src="img/products/schwinn-traveler-full.jpg" width="358" height="232"
+                    alt="Велосипед SCHWINN Traveler women 2022">
+                </div>
+
+                <div class="description__info">
+                  <h2>Велосипед SCHWINN Traveler women 2022</h2>
+
+                  <p>Женский велосипед со&nbsp;стальной рамой Classic step-true lightweight позволяет девушкам без
+                    проблем его перемещать.</p>
+
+                  <p>На&nbsp;данном велосипеде имеется 7&nbsp;скоростей с&nbsp;переключателями от&nbsp;Shimano,
+                    а&nbsp;жесткая вилка обеспечивает отличную управляемость. Подходит для катания
+                    по&nbsp;асфальтированным поверхностям.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Хар-ки -->
+            <div class="characteristic" data-characteristic-block>
+
+              <div class="characteristic__wrapper section-padding section-title">
+                <h3>Характеристики</h3>
+
+                <ol class="characteristic__list" data-characteristic-list>
+                  <li data-option>Стальная рама</li>
+                  <li data-option>Жесткая вилка</li>
+                  <li data-option>Колеса диаметром 24&nbsp;дюймов</li>
+                  <li data-option>7&nbsp;скоростей</li>
+                </ol>
+
+              </div>
+
+              <!-- Добавление хар-ик -->
+              <div class="characteristic__control section-title">
+                <h3>Добавить характеристику</h3>
+
+                <form class="characteristic__form form" action="#" method="post" data-characteristic-form>
+                  <div class="form__wrapper" data-form-wrapper>
+                    <p class="form__group" data-form-group>
+                      <label>
+                        <input type="text" name="option" placeholder="Алюминиевый сплав" data-good-characteristic>
+                      </label>
+                    </p>
+
+                    <button class="form__btn btn-liquid" type="submit">
+                      <span class="btn-liquid__text">Добавить</span>
+                      <span class="btn-liquid__wave"></span>
+                    </button>
+
+                    <!-- Сюда вставляется сообщение об ошибке ввода -->
+                  </div>
+
+                </form>
+
+              </div>
+
+            </div>
+
+            <!-- Подтверждение добавления хар-ки -->
+            <div class="confirmation">
+
+              <h3 class="visually-hidden">Подтверждение добавления характеристики</h3>
+              <div class="confirmation__wrapper section-padding">
+
+                <div class="confirmation__block">
+                  <button type="button">Окей</button>
+                  <button type="button">Отмена</button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <template id="error-message">
+    <div class="form__message" data-error-message>
+      <p data-error-text>Пытаетесь добавить воздух, как характеристику !?</p>
+    </div>
+  </template>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+# Каталог указывается с помощью - слеш /
+node-modules/
+build/
+
+# Просто файл - без всего
+package-lock.json
+source/css/*.css
+source/css/*.map
+
+.DS_Store
+.idea
+.vscode

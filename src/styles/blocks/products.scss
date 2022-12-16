@@ -1,0 +1,28 @@
+.products {
+    overflow: hidden
+}
+
+.products__list {
+    @include reset-list;
+}
+
+.products__item {
+    // display: none;
+
+    // hidden — элемент не виден на странице, но занимает отведённое ему место, влияет на поток документа. !!! Важный момент: при значении hidden элемент становится невидимым для программ чтения с экрана (скринридеров), а также на него нельзя будет попасть при навигации с помощью клавиатуры.
+    visibility: hidden;
+
+    opacity: 0;
+    max-height: 0;
+    transform: scale(0.9);
+}
+
+.products__item.active {
+    // display: block;
+
+    visibility: visible;
+    opacity: 1;
+    max-height: 100%;
+    transform: scale(1);
+    transition: transform 0.3s linear;
+}

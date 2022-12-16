@@ -1,0 +1,75 @@
+// Отключение эффектов на планшете и мобилке
+
+@media (min-width: 846px) {
+    .btn-liquid {
+        position: relative;
+        display: block;
+
+        // Чтобы скрыть все что выходит за границы кнопки
+        overflow: hidden;
+    }
+
+    .btn-liquid__text {
+        position: relative;
+        z-index: 1;
+
+        // Чтобы надпись ни мешала клику
+        pointer-events: none;
+    }
+
+    // Якобы море (но по факту прямоугольник снизу)
+    .btn-liquid__wave {
+        display: block;
+
+        position: absolute;
+        top: -35px;
+        left: 0;
+
+        width: 100%;
+        height: 200px;
+        background-color: #4973ff;
+
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+
+        // Два вращающихся круга с разной скоростью анимации
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 130%;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -75%);
+        }
+
+        &::before {
+            border-radius: 45%;
+            background-color: rgba(20, 20, 20, 1);
+            animation: wave 5s linear infinite;
+        }
+
+        &::after {
+            border-radius: 40%;
+            background-color: rgba(20, 20, 20, 0.5);
+            animation: wave 10s linear infinite;
+        }
+
+        &:hover,
+        &:focus {
+            top: -120px;
+        }
+    }
+}
+
+// Анимация вращения псевдоэлементов (анимация волны)
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
