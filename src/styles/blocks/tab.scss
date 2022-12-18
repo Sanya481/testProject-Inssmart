@@ -1,0 +1,82 @@
+.tab__btn {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 2rem 2.4rem;
+  border-radius: 2rem 2rem 0 0;
+  border: none;
+  cursor: pointer;
+
+  position: relative;
+
+  background: $gainsboro;
+  color: $black;
+
+  transition: color 0.3s linear, border-radius 0.8s ease;
+
+  @media (max-width: $vp-968) {
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    background-color: $white;
+    border-radius: 2rem;
+    padding: 2rem 5rem 2rem 2rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../img/decorative/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 24px;
+      height: 24px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+
+      transition: transform 0.3s linear;
+    }
+  }
+}
+
+.tab__info-wrapper {
+  background-color: $white;
+  padding: 0 6rem;
+  border-radius: 0 2rem 2rem 2rem;
+
+  overflow: hidden;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  // Свойство, чтобы скрыть эл-т
+  // hidden — элемент не виден на странице, но занимает отведённое ему место, влияет на поток документа. !!! Важный момент: при значении hidden элемент становится невидимым для программ чтения с экрана (скринридеров), а также на него нельзя будет попасть при навигации с помощью клавиатуры.
+  visibility: hidden;
+
+  // Свойства для анимации
+  opacity: 0;
+  transform: scale(0.9);
+
+  transition: opacity 0.3s linear, transform 0.3s linear;
+
+  @media (max-width: $vp-968) {
+    // В планшетной версии приводим все свойства по умолчанию
+    visibility: visible;
+    position: static;
+    opacity: 1;
+    transform: scale(1);
+
+    padding: 0 2rem;
+
+    border-radius: 0 0 2rem 2rem;
+
+    // Свойства для работы аккордеона
+    max-height: 0;
+    // overflow: hidden;
+
+    transition: max-height 0.3s linear;
+  }
+}

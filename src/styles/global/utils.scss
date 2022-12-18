@@ -1,76 +1,76 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 .visually-hidden {
-    position: absolute;
+  position: absolute;
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    border: 0;
+  border: 0;
 
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
 .page {
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    color: $charcoal;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: $charcoal;
 }
 
 .page-body {
-    background-color: $white-smoke;
+  background-color: $white-smoke;
 }
 
 .page-body__wrapper {
-    max-width: 846px;
-    margin: 8rem 10.6rem;
-    background-color: $white;
-    border-radius: 0 2rem 2rem 2rem;
+  max-width: 846px;
+  margin: 8rem 10.6rem;
+  background-color: $white;
+  border-radius: 0 2rem 2rem 2rem;
 
-    @media (max-width: $vp-767) {
-        max-width: 100%;
-        margin: 4rem 2rem;
-    }
+  @media (max-width: $vp-968) {
+    max-width: 100%;
+    margin: 4rem 2rem;
+  }
 }
 
 // Общие стили
 
 .section-title h3 {
-    font-size: 1.8rem;
-    line-height: 1.5;
-    font-weight: 500;
-    color: $black;
-    margin: 0 0 2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: $black;
+  margin: 0 0 2rem;
 
-    @media (max-width: $vp-767) {
-        font-size: 1.6rem;
-        margin: 0 0 1.5rem;
-    }
+  @media (max-width: $vp-968) {
+    font-size: 1.6rem;
+    margin: 0 0 1.5rem;
+  }
 }
 
 .section-padding {
-    padding: 4rem 0;
+  padding: 4rem 0;
 
-    @media (max-width: $vp-767) {
-        padding: 3rem 0;
+  @media (max-width: $vp-968) {
+    padding: 3rem 0;
 
-    }
+  }
 }
