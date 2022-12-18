@@ -55,15 +55,34 @@
       background-color: rgba(20, 20, 20, 0.5);
       animation: wave 10s linear infinite;
     }
+  }
 
-    &:hover,
-    &:focus {
-      top: -120px;
-    }
+  // Эффекты при наведении в десктопной версии
+  .btn-liquid:hover .btn-liquid__wave,
+  .btn-liquid:focus .btn-liquid__wave {
+    top: -120px;
+  }
 
-    &:active {
-      background: linear-gradient(0deg, rgba(195, 34, 156, 1) 0%, rgba(45, 189, 253, 1) 100%);
-    }
+  .btn-liquid:active .btn-liquid__wave {
+    background: linear-gradient(0deg, rgba(195, 34, 156, 1) 0%, rgba(45, 189, 253, 1) 100%);
+  }
+
+  .btn-liquid:disabled .btn-liquid__wave {
+    top: -120px;
+    background: $gray;
+    cursor: default;
+  }
+}
+
+// Эффекты при наведении в мобильной версии
+.btn-liquid:active {
+  background: linear-gradient(0deg, rgba(195, 34, 156, 1) 0%, rgba(45, 189, 253, 1) 100%);
+}
+
+.btn-liquid:disabled {
+  @media (max-width: $vp-968) {
+    background: $gray;
+    cursor: default;
   }
 }
 

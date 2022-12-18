@@ -1,11 +1,11 @@
 {
   "name": "gulp-template",
   "version": "1.0.0",
-  "description": "Сборка проекта на Gulp, Less",
+  "description": "Сборка проекта на Gulp, Sass",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "build": "gulp build --build",
+    "start": "gulp build --build",
     "deploy": "gh-pages -d build"
   },
   "author": "",
