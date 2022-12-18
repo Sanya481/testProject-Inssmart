@@ -1,35 +1,45 @@
 .confirmation__block {
-    box-shadow: 0 10px 40px rgba(12, 12, 12, 0.1);
-    border-radius: 2rem;
-    padding: 3rem 3.6rem;
+  box-shadow: 0 10px 40px rgba(12, 12, 12, 0.1);
+  border-radius: 2rem;
+  padding: 3rem 3.6rem;
 
-    // В этом проекте это излишне, но для избежания переполнения - добавим
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  // В этом проекте это излишне, но для избежания переполнения - добавим
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .confirmation__block button {
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: $black;
-    border-radius: 1.6rem;
-    padding: 1.4rem 2.4rem;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: $black;
+  border-radius: 1.6rem;
+  padding: 1.4rem 2.4rem;
 
-    transition: color 0.3s linear, background-color 0.3s ease;
+  transition: color 0.3s linear, background 0.3s ease;
 
-    // Отключение эффектов на планшете и мобилке
-    @media (min-width: 846px) {
-        &:hover,
-        &:focus {
-            color: $white;
-            background-color: $persian-blue;
-            transition: color 0.3s linear, background-color 0.3s ease;
-        }
+  // Отключение эффектов на планшете и мобилке
+  @media (min-width: 846px) {
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $persian-blue;
+      transition: color 0.3s linear, background-color 0.3s ease;
     }
 
+    &:active {
+      color: $white;
+      background: linear-gradient(180deg, rgba(195,34,156,1) 0%, rgba(45,189,253,1) 100%);
+    }
+  }
+
+  &:active {
+    color: $white;
+    background: linear-gradient(180deg, rgba(195,34,156,1) 0%, rgba(45,189,253,1) 100%);
+    transition: color 0s linear;
+  }
 }

@@ -1,70 +1,51 @@
 .tabs {
-    background-color: $white-smoke;
+  background-color: $white-smoke;
 }
 
 .tabs .container {
-    padding: 0;
+  padding: 0;
 }
 
 .tabs__list {
-    @include reset-list;
+  @include reset-list;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    @media (max-width: $vp-767) {
-        flex-direction: column;
-        row-gap: 20px;
-    }
+  // Для позиционирования табов
+  position: relative;
+
+  @media (max-width: $vp-968) {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
 }
 
-.tabs__list button {
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 2.2rem;
-    line-height: 1.5;
-    font-weight: 500;
-    padding: 2rem 2.4rem;
-    border-radius: 2rem 2rem 0 0;
-    border: none;
-    cursor: pointer;
+// is-active - класс для работы табов в десктопной версии
 
-    position: relative;
-
-    background: $gainsboro;
-    color: $black;
-
-    @media (max-width: $vp-767) {
-        width: 100%;
-        text-align: left;
-        background-color: $white;
-        border-radius: 2rem;
-        padding: 2rem 5rem 2rem 2.4rem;
-
-        &::after {
-            content: "";
-            position: absolute;
-            background-image: url('../img/decorative/arrow-2.svg');
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            width: 24px;
-            height: 24px;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-
-            transition: transform 0.3s linear;
-        }
-    }
+.tabs__item.is-active .tab__btn {
+  color: $persian-blue;
+  background-color: $white;
 }
 
-.tabs__list button.active {
-    background-color: $white;
+.tabs__item.is-active .tab__info-wrapper {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+// is-open - класс для работы аккордеона в планшетной версии
+
+// При открытом аккордеоне
+.tabs__item.is-open .tab__btn {
+  @media (max-width: $vp-968) {
     color: $persian-blue;
-    cursor: default;
+    border-radius: 2rem 2rem 0 0;
 
-    @media (max-width: $vp-767) {
-        &::after {
-            transform: translateY(-50%) rotate(180deg);
-        }
+    transition: color 0.3s linear, border-radius 0.3s ease;
+
+    &::after {
+      transform: translateY(-50%) rotate(180deg);
     }
+  }
 }
