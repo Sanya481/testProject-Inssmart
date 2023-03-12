@@ -1,6 +1,7 @@
 # Тестовое задание на HTML-верстальщика в компанию Inssmart
-## Ссылка на макет:
-https://www.figma.com/file/73J1PSkrEcvFW2eASIQXOy/%D0%94%D0%BB%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-(Copy)?t=IHPkPyKzZEvdDeOD-6
+## [Ссылка на макет](https://www.figma.com/file/73J1PSkrEcvFW2eASIQXOy/%D0%94%D0%BB%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-(Copy)?t=IHPkPyKzZEvdDeOD-6) ;)
+
+![Превью сайта](src/img/decorative/preview.jpg)
 
 ### Требования к интерфейсу:
 - адаптивный и отзывчивый;
